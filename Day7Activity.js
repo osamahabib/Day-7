@@ -49,49 +49,57 @@ class Circle{
     }
     Circle()
     {
-
+        console.log('Class Circle created to calculate area and cicumference of circle.');
     }
     Circle(radius)
     {
-
+        this.radius=radius;
     }
     Circle(radius,color)
     {
-
+        this.radius=radius;
+        this.color=color;
     }
     getRadius()
     {
-
+        return `Radius: ${this.radius}`;
     }
     setRadius(radius)
     {
-
+        this.radius=radius;
     }
     getColor()
     {
-
+        return `Color: ${this.color}`;
     }
     setColor(color)
     {
-
+        this.color=color;
     }
     toString()
     {
-
+        return `Radius: ${this.radius} Color: ${this.color}`;
     }
     getArea()
     {
-
+        let area = 3.1415*this.radius*this.radius;
+        return `Area of circle: ${area}`
     }
     getCircumference()
     {
-
+        let circumference = 2*3.1415*this.radius;
+        return `Circumference: ${circumference}`;
     }
-
 }
+let circle1 = new Circle();//creating object circle1 for Circle class
+circle1.setColor('Blue');
+circle1.setRadius(2);
+console.log(circle1.getArea());//claculates and returns area
+console.log(circle1.getCircumference());//calculates and returns circumference
+//Output:
+// Area of circle: 12.566
+// Circumference: 12.566
 
-let classObject = new Circle(5,'blue');//creating an object for class Circle
-classObject.getArea();//calling function through object
 
 
 // 3. Write a “person” class to hold all the details.
